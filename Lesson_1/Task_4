@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    double salary;
+    
+    cout << "Ведіть зарплату: ";
+    cin >> salary;
+
+   
+    int range = (salary / 1000 > 1) + (salary / 1000000 > 1) ;
+
+    // Логика на основе switch-case
+    switch (range) {
+        case 0:
+            cout << "Ви повинні працювати більше!" << endl;
+            break;
+        case 1:
+            cout << "Ви молодець!" << endl;
+            break;
+        case 2:
+            cout << "Ви міліонер!" << endl;
+            break;
+    }
+
+    return 0;
+}
